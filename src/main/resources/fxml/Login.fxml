@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.strong.blooddashboard.Controller.LoginController">
+   <children>
+      <Label layoutX="402.0" layoutY="43.0" text="LOGIN">
+         <font>
+            <Font name="Noto Sans Display Condensed Medium" size="35.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="username" focusColor="#0f42da" labelFloat="true" layoutX="337.0" layoutY="155.0" prefHeight="26.0" prefWidth="227.0" promptText="Enter Username" AnchorPane.leftAnchor="337.0" AnchorPane.rightAnchor="336.0" AnchorPane.topAnchor="155.0" />
+      <JFXPasswordField fx:id="password" labelFloat="true" layoutX="337.0" layoutY="214.0" prefHeight="26.0" prefWidth="227.0" promptText="Enter Password" AnchorPane.leftAnchor="337.0" AnchorPane.rightAnchor="336.0" AnchorPane.topAnchor="214.0" />
+      <JFXButton buttonType="RAISED" defaultButton="true" layoutX="393.0" layoutY="300.0" onAction="#Login" ripplerFill="#058646" style="-fx-background-color: black;" text="LOGIN" textFill="#04bc0a">
+         <font>
+            <Font name="Open Sans Semibold" size="24.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="error" layoutX="181.0" layoutY="115.0" prefHeight="18.0" prefWidth="525.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="62.0" layoutY="136.0" onAction="#Donor" ripplerFill="#044336" text="Sign Donor" />
+      <JFXButton buttonType="RAISED" layoutX="62.0" layoutY="181.0" onAction="#history" ripplerFill="#044336" text="Create History" />
+      <JFXButton buttonType="RAISED" layoutX="62.0" layoutY="227.0" onAction="#appointment" ripplerFill="#043228" text="Create Appointment" />
+      <JFXButton buttonType="RAISED" layoutX="65.0" layoutY="266.0" onAction="#staff" ripplerFill="#044638" text="Create Staff" />
+      <JFXButton buttonType="RAISED" layoutX="62.0" layoutY="306.0" onAction="#donation" ripplerFill="#074336" text="Create Donation" />
+   </children>
+</AnchorPane>

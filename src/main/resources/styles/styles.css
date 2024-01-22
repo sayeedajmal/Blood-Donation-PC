@@ -1,0 +1,10 @@
+.staffId,
+.staffName,
+.email,
+.contactNumber,
+.createdAt,
+.updatedAt,
+.enabled,
+.position {
+  --fx-text-align: center;
+}
