@@ -93,7 +93,6 @@ public class DashboardController implements Initializable {
             staff.setUpdatedAt(getLocalDateTimeOrNull(staffObject, "updatedAt"));
             staffList.add(staff);
         }
-
         return staffList;
     }
 

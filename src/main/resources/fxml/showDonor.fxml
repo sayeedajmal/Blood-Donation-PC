@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.strong.blooddashboard.Controller.DonorController">
+   <children>
+      <Label layoutX="528.0" layoutY="7.0" text="Donors" textFill="#10c33d" AnchorPane.topAnchor="7.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="error" alignment="CENTER" layoutX="544.0" layoutY="32.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="32.0" />
+      <TableView fx:id="tableView" layoutX="227.0" layoutY="86.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="70.0">
+         <columns>
+            <TableColumn fx:id="donorId" prefWidth="75.0" style="--text-align: center;" text="ID" />
+            <TableColumn fx:id="firstName" prefWidth="75.0" text="FirstName" />
+            <TableColumn fx:id="lastName" prefWidth="75.0" text="LastName" />
+            <TableColumn fx:id="dateofBirth" prefWidth="75.0" text="DOB" />
+            <TableColumn fx:id="contactNumber" prefWidth="75.0" text="Contact" />
+            <TableColumn fx:id="donorEmail" prefWidth="75.0" text="Email" />
+            <TableColumn fx:id="bloodGroup" prefWidth="75.0" text="BloodGroup" />
+            <TableColumn fx:id="lastDonationDate" prefWidth="75.0" text="Last Donation Date" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+</AnchorPane>

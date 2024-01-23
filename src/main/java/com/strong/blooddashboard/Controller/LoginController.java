@@ -60,6 +60,14 @@ public class LoginController implements Initializable {
 
     }
 
+    public void showStaff() throws IOException {
+        openPanel("/fxml/dashboard.fxml", "Dashboard");
+    }
+
+    public void showDonor() throws IOException {
+        openPanel("/fxml/showDonor.fxml", "Dashboard");
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 

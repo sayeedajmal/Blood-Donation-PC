@@ -51,7 +51,6 @@ public class ApiRequest {
         try (OutputStream outputStream = connection.getOutputStream()) {
             // Convert the JsonObject to a byte array and write it to the request body
             byte[] input = jsonObject.toString().getBytes("utf-8");
-            System.out.println(jsonObject.toString());
             outputStream.write(input, 0, input.length);
         }
 
@@ -71,36 +70,34 @@ public class ApiRequest {
             // Handle the response as needed
             return response.toString();
         } else {
-            String responseBody = readResponseBody(connection);
-            throw new IOException("Unexpected response code: " + responseCode + ", Response body: " + responseBody);
+            return readResponseBody(connection);
+            // throw new IOException("Unexpected response code: " + responseCode + ",
+            // Response body: " + responseBody);
         }
     }
 
     private static String readResponseBody(HttpURLConnection connection) throws IOException {
         InputStream errorStream = connection.getErrorStream();
 
-        if (errorStream != null) {
-            try (BufferedReader in = new BufferedReader(new InputStreamReader(errorStream))) {
-                String inputLine;
-                StringBuilder response = new StringBuilder();
+        if (errorStream == null) {
+            return "Created Sucessfully";
+        }
+        try (BufferedReader in = new BufferedReader(new InputStreamReader(errorStream))) {
+            String inputLine;
+            StringBuilder response = new StringBuilder();
 
-                while ((inputLine = in.readLine()) != null) {
-                    response.append(inputLine);
-                }
-
-                return extractMessageFromJson(response.toString());
+            while ((inputLine = in.readLine()) != null) {
+                response.append(inputLine);
             }
-        } else {
-            return "SomeThing Wrong";
+            return extractMessageFromJson(response.toString());
         }
     }
 
     private static String extractMessageFromJson(String jsonResponse) {
         try {
-            JsonObject json = new JsonParser().parse(jsonResponse).getAsJsonObject();
+            JsonObject json = JsonParser.parseString(jsonResponse).getAsJsonObject();
             return json.get("message").getAsString();
         } catch (JsonParseException | NullPointerException e) {
-            // Handle parsing issues or null pointer exceptions
             return "Unexpected JSON format: " + jsonResponse;
         }
     }

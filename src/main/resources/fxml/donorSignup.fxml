@@ -7,25 +7,27 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="487.0" prefWidth="738.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.strong.blooddashboard.Controller.DonorController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="487.0" prefWidth="738.0"
+   xmlns="http://javafx.com/javafx/21"
+   xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.strong.blooddashboard.Controller.DonorController">
    <children>
-      <JFXTextField fx:id="first" focusColor="#0fddc9" labelFloat="true" layoutX="297.0" layoutY="96.0" prefHeight="26.0" prefWidth="153.0" promptText="First" unFocusColor="BLACK" />
-      <JFXTextField fx:id="email" focusColor="#0fddc9" labelFloat="true" layoutX="293.0" layoutY="180.0" prefHeight="26.0" prefWidth="153.0" promptText="Email" unFocusColor="BLACK" />
-      <JFXTextField fx:id="contact" focusColor="#0fddc9" labelFloat="true" layoutX="293.0" layoutY="221.0" prefHeight="26.0" prefWidth="153.0" promptText="contact Number" unFocusColor="BLACK" />
+      <JFXTextField fx:id="first" focusColor="#0fddc9" labelFloat="true" layoutX="235.0" layoutY="109.0" prefHeight="26.0" prefWidth="153.0" promptText="First" unFocusColor="BLACK" />
+      <JFXTextField fx:id="email" focusColor="#0fddc9" labelFloat="true" layoutX="231.0" layoutY="197.0" prefHeight="26.0" prefWidth="153.0" promptText="Email" unFocusColor="BLACK" />
+      <JFXTextField fx:id="contact" focusColor="#0fddc9" labelFloat="true" layoutX="231.0" layoutY="241.0" prefHeight="26.0" prefWidth="153.0" promptText="contact Number" unFocusColor="BLACK" />
       <Label layoutX="266.0" layoutY="39.0" text="SIGNUP DONOR">
          <font>
             <Font name="System Bold" size="26.0" />
          </font>
       </Label>
-      <Label fx:id="error" layoutX="353.0" layoutY="87.0" textFill="RED" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="87.0" />
-      <JFXButton buttonType="RAISED" layoutX="323.0" layoutY="325.0" onAction="#Signup" ripplerFill="#08683e" style="-fx-background-color: black;" text="SIGNUP" textFill="#0bcd9c">
+      <Label fx:id="error" layoutX="10.0" layoutY="85.0" textFill="RED" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="85.0" />
+      <JFXButton buttonType="RAISED" layoutX="334.0" layoutY="338.0" onAction="#Signup" ripplerFill="#08683e" style="-fx-background-color: black;" text="SIGNUP" textFill="#0bcd9c">
          <font>
             <Font name="System Bold" size="19.0" />
          </font>
       </JFXButton>
-      <JFXTextField fx:id="last" focusColor="#0fddc9" labelFloat="true" layoutX="293.0" layoutY="140.0" prefHeight="26.0" prefWidth="153.0" promptText="Last" unFocusColor="BLACK" />
-      <DatePicker fx:id="dob" layoutX="483.0" layoutY="133.0" promptText="DOB" showWeekNumbers="true" />
-      <JFXTextField fx:id="bloodgroup" layoutX="293.0" layoutY="271.0" prefHeight="26.0" prefWidth="153.0" promptText="Blood Group" />
-      <JFXTextField fx:id="address" layoutX="488.0" layoutY="180.0" prefHeight="26.0" prefWidth="179.0" promptText="Address" />
+      <JFXTextField fx:id="last" focusColor="#0fddc9" labelFloat="true" layoutX="231.0" layoutY="155.0" prefHeight="26.0" prefWidth="153.0" promptText="Last" unFocusColor="BLACK" />
+      <DatePicker fx:id="dob" layoutX="421.0" layoutY="146.0" promptText="DOB" showWeekNumbers="true" />
+      <JFXTextField fx:id="bloodgroup" layoutX="231.0" layoutY="287.0" prefHeight="26.0" prefWidth="153.0" promptText="Blood Group" />
+      <JFXTextField fx:id="address" layoutX="426.0" layoutY="193.0" prefHeight="26.0" prefWidth="179.0" promptText="Address" />
    </children>
 </AnchorPane>
